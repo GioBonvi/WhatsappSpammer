@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350.0" minWidth="430.0" prefHeight="364.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="singlemessage.SinglemessageController">
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="The text of the message here: use #NL# to mark new lines." wrapText="true" />
+                <TextField fx:id="messageTextTxt" promptText="Message text" />
+                <Label text="The time to wait between two messages (in milliseconds).&#10;You can also insert a range (e.g. &quot;100-500&quot;) to wait a random time in that range.&#10;Extremely small values (under 150ms) can produce unwanted results." wrapText="true" />
+                <TextField fx:id="messageWaitTimeTxt" promptText="Pause time (ms)" />
+                <Label text="How many times should the message be sent." />
+                <TextField fx:id="repetitionsTxt" promptText="Repetitions" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </center>
+    <bottom>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="30.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleRun" text="Run" />
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#handleClose" text="Close" GridPane.columnIndex="1" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </GridPane>
+    </bottom>
+    <top>
+        <Label fx:id="title" text="Single message" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="20.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+</BorderPane>
