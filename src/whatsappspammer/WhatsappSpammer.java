@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class WhatsappSpammer extends Application {
@@ -29,6 +30,8 @@ public class WhatsappSpammer extends Application {
                 + "By clicking \"Ok\" you declare you have read, understood "
                 + "and accepted this disclaimer."
         );
+        // Set icon.
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(WhatsappSpammer.class.getResourceAsStream("/images/icon.png")));
         ButtonType btnOk = new ButtonType("Ok", ButtonData.LEFT);
         ButtonType btnCancel = new ButtonType("Cancel", ButtonData.CANCEL_CLOSE);
 
@@ -39,6 +42,7 @@ public class WhatsappSpammer extends Application {
         // Open the main menu.
         Parent main = FXMLLoader.load(getClass().getResource("/mainmenu/mainmenu.fxml"));
         Scene scene = new Scene(main);
+        stage.getIcons().add(new Image(WhatsappSpammer.class.getResourceAsStream("/images/icon.png")));
         stage.setScene(scene);
         stage.setTitle("Main menu");
         stage.show();

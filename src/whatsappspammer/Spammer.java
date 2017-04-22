@@ -16,6 +16,7 @@ import java.util.Optional;
 import java.util.Random;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Spammer {
@@ -28,11 +29,15 @@ public class Spammer {
     private final List<Message> messages;
     private final Robot robot;
     private final Message baseMessage;
+    private final Alert alert;
 
     public Spammer() throws AWTException, Exception {
         this.messages = new ArrayList<>();
         this.robot = new Robot();
         this.baseMessage = new Message("");
+        this.alert = new Alert(Alert.AlertType.NONE);
+        // Set icon.
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(Spammer.class.getResourceAsStream("/images/icon.png")));
     }
 
     /*
@@ -41,10 +46,10 @@ public class Spammer {
      */
     public Optional<ButtonType> showInstructions() {
         // Display instructions.
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Instructions");
-        alert.setHeaderText("Follow this instructions accurately.");
-        alert.setContentText(
+        this.alert.setAlertType(Alert.AlertType.CONFIRMATION);
+        this.alert.setTitle("Instructions");
+        this.alert.setHeaderText("Follow this instructions accurately.");
+        this.alert.setContentText(
                 "!! Leave this box open while you do this!!\n\n"
                 + "Open up https://web.whataspp.com\n"
                 + "Make it full screen\n"
@@ -53,9 +58,9 @@ public class Spammer {
                 + "When everything is ready click OK to send the messages or Cancel to abort."
         );
         // Keep instruction dialog on top.
-        ((Stage) alert.getDialogPane().getScene().getWindow()).setAlwaysOnTop(true);
+        ((Stage) this.alert.getDialogPane().getScene().getWindow()).setAlwaysOnTop(true);
         // Show instructions and wait for confirmation.
-        return alert.showAndWait();
+        return this.alert.showAndWait();
     }
 
     /*
@@ -90,11 +95,11 @@ public class Spammer {
                     break;
             }
         }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Spamming complete");
-        alert.setHeaderText(null);
-        alert.setContentText("All messages have been sent.");
-        alert.showAndWait();
+        this.alert.setAlertType(Alert.AlertType.INFORMATION);
+        this.alert.setTitle("Spamming complete");
+        this.alert.setHeaderText(null);
+        this.alert.setContentText("All messages have been sent.");
+        this.alert.showAndWait();
     }
 
     /*

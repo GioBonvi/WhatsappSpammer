@@ -14,6 +14,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import whatsappspammer.Spammer;
@@ -34,6 +35,8 @@ public class MessagelistController implements Initializable {
         errorAlert = new Alert(Alert.AlertType.ERROR);
         errorAlert.setTitle("Error");
         errorAlert.setHeaderText("Some fields contain an invalid parameter.");
+        // Set icon.
+        ((Stage) errorAlert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(MessagelistController.class.getResourceAsStream("/images/icon.png")));
     }
 
     // Load button pressed: prompt for file selection.

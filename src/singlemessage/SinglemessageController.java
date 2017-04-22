@@ -10,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 import whatsappspammer.Spammer;
 import whatsappspammer.Message;
 
@@ -29,6 +31,8 @@ public class SinglemessageController implements Initializable {
         errorAlert = new Alert(Alert.AlertType.ERROR);
         errorAlert.setTitle("Error");
         errorAlert.setHeaderText("Some fields contain an invalid parameter.");
+        // Set icon.
+        ((Stage) errorAlert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(SinglemessageController.class.getResourceAsStream("/images/icon.png")));
     }
 
     // Close button pressed: close window.

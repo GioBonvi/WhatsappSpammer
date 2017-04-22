@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class MainmenuController implements Initializable {
@@ -25,6 +26,7 @@ public class MainmenuController implements Initializable {
     protected void handleSingleMessage(ActionEvent e) throws IOException {
         Parent main = FXMLLoader.load(getClass().getResource("/singlemessage/singlemessage.fxml"));
         Stage stage = new Stage();
+        stage.getIcons().add(new Image(MainmenuController.class.getResourceAsStream("/images/icon.png")));
         stage.minWidthProperty().set(450);
         stage.minHeightProperty().set(410);
         stage.setScene(new Scene(main));
@@ -37,6 +39,7 @@ public class MainmenuController implements Initializable {
     protected void handleMessageList(ActionEvent e) throws IOException {
         Parent main = FXMLLoader.load(getClass().getResource("/messagelist/messagelist.fxml"));
         Stage stage = new Stage();
+        stage.getIcons().add(new Image(MainmenuController.class.getResourceAsStream("/images/icon.png")));
         stage.setScene(new Scene(main));
         stage.setTitle("Send a list of messages");
         stage.show();
