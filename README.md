@@ -1,5 +1,5 @@
 # Whatsapp Spammer
-Whatsapp Spammer is a quick and dirty Java application to send multiple messages through the Whatsapp Web or Whatsapp dekstop client.
+Whatsapp Spammer is a quick and dirty Java application to send multiple messages through the Whatsapp Web client.
 
 ## How to use
 To use Whatsapp Spammer you need to run [Whatsapp Web](https://web.whatsapp.com) on your computer, then open Whatsapp Spammer, choose the source of the messages (single message or list of messages), fill in the fields and click run.  
