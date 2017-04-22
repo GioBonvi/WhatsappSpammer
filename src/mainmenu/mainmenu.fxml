@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -8,24 +9,35 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="265.0" prefWidth="339.0" spacing="20" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainmenu.MainmenuController">
-    <padding>
-        <Insets bottom="20" left="20" right="20" top="20" />
-    </padding>
-    <children>
-        <HBox alignment="CENTER" spacing="50">
-            <children>
-                <Button onAction="#handleSingleMessage" text="Single message" />
-                <Button onAction="#handleMessageList" text="List of messages" />
-            </children>
-        </HBox>
-        <HBox alignment="CENTER" spacing="50">
-            <children>
-                <Button cancelButton="true" onAction="#handleClose" text="Close" />
-            </children>
-        </HBox>
-    </children>
-    <stylesheets>
-        <URL value="@/mainmenu/mainmenu.css" />
-    </stylesheets>
-</VBox>
+<BorderPane prefHeight="285.0" prefWidth="400.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainmenu.MainmenuController">
+    <top>
+      <Label styleClass="title" text="Whatsapp Spammer" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="265.0" prefWidth="339.0" spacing="20" BorderPane.alignment="CENTER">
+         <children>
+            <Button onAction="#handleSingleMessage" text="Single message" />
+            <Button onAction="#handleMessageList" text="List of messages" />
+         </children>
+         <padding>
+            <Insets bottom="20" left="20" right="20" top="20" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="444.0" spacing="20.0" styleClass="footer" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleHelp" text="Help" />
+            <Button cancelButton="true" onAction="#handleClose" text="Close" />
+         </children>
+      </HBox>
+   </bottom>
+   <stylesheets>
+    <URL value="@/resources/main.css" />
+    <URL value="https://fonts.googleapis.com/css?family=Roboto:400,500,900" />
+   </stylesheets>
+</BorderPane>

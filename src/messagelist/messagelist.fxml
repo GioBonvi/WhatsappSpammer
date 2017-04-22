@@ -10,7 +10,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messagelist.MessagelistController">
     <top>
-        <Label text="Messages from list" BorderPane.alignment="CENTER">
+        <Label styleClass="title" text="Messages from list" BorderPane.alignment="CENTER">
             <BorderPane.margin>
                 <Insets top="20.0" />
             </BorderPane.margin>
@@ -38,19 +38,20 @@
                 <Label text="Number of repetitions." />
                 <TextField fx:id="repetitionsTxt" promptText="Repetitions" />
                 <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-                    <fx:define>
-                        <ToggleGroup fx:id="selectionMode" />
-                    </fx:define>
                     <children>
-                        <RadioButton mnemonicParsing="false" selected="true" text="Full list" toggleGroup="$selectionMode" />
-                        <RadioButton mnemonicParsing="false" text="Random single messages" toggleGroup="$selectionMode" />
+                        <RadioButton selected="true" text="Full list">
+                            <toggleGroup>
+                               <ToggleGroup fx:id="selectionMode" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton text="Random single messages" toggleGroup="$selectionMode" />
                     </children>
                 </HBox>
             </children>
         </VBox>
     </center>
     <bottom>
-        <GridPane BorderPane.alignment="CENTER">
+        <GridPane styleClass="footer" BorderPane.alignment="CENTER">
             <columnConstraints>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -64,7 +65,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </GridPane.margin>
                 </Button>
-                <Button cancelButton="true" mnemonicParsing="false" onAction="#handleClose" text="Cancel" GridPane.columnIndex="1">
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#handleClose" text="Close" GridPane.columnIndex="1">
                     <GridPane.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </GridPane.margin>
@@ -72,4 +73,8 @@
             </children>
         </GridPane>
     </bottom>
+   <stylesheets>
+    <URL value="@/resources/main.css" />
+    <URL value="https://fonts.googleapis.com/css?family=Roboto:400,500,900" />
+   </stylesheets>
 </BorderPane>

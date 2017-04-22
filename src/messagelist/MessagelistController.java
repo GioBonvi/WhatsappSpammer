@@ -36,7 +36,7 @@ public class MessagelistController implements Initializable {
         errorAlert.setTitle("Error");
         errorAlert.setHeaderText("Some fields contain an invalid parameter.");
         // Set icon.
-        ((Stage) errorAlert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(MessagelistController.class.getResourceAsStream("/images/icon.png")));
+        ((Stage) errorAlert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(MessagelistController.class.getResourceAsStream("/resources/icon.png")));
     }
 
     // Load button pressed: prompt for file selection.

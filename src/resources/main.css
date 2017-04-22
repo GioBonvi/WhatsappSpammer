@@ -1,0 +1,45 @@
+.root {
+    -fx-background-color: #ece5dd;
+}
+
+.title {
+    -fx-font-family: 'Roboto Black', sans-serif;
+    -fx-font-weright: 900;
+    -fx-font-size: 36px;
+}
+
+.footer {
+    -fx-background-color: #dacdbd;
+}
+
+.button {
+    -fx-font-family: 'Roboto Medium', sans-serif;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 3, 0, 0, 0);
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 3px;
+    -fx-background-color: #128c7e;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+.text-field {
+    -fx-background-radius: 0;
+    -fx-background-color: #128c7e, #ece5dd;
+    -fx-background-insets: 0, 0 0 2 0;
+    -fx-prompt-text-fill: #636466;
+    
+}
+
+.text-field:focused {
+    -fx-background-radius: 0;
+    -fx-background-color: #075e54, #ece5dd;
+    -fx-background-insets: 0, 0 0 2 0;
+}
+
+.radio-button .dot {
+    -fx-mark-highlight-color: rgba(42, 178, 93, 0.5);
+    -fx-mark-color: rgb(42, 178, 93);
+}

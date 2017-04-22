@@ -37,7 +37,7 @@ public class Spammer {
         this.baseMessage = new Message("");
         this.alert = new Alert(Alert.AlertType.NONE);
         // Set icon.
-        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(Spammer.class.getResourceAsStream("/images/icon.png")));
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(Spammer.class.getResourceAsStream("/resources/icon.png")));
     }
 
     /*

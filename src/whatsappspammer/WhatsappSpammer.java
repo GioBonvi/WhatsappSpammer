@@ -15,6 +15,7 @@ public class WhatsappSpammer extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        /*
         // Show disclaimer.
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Disclaimer");
@@ -31,7 +32,7 @@ public class WhatsappSpammer extends Application {
                 + "and accepted this disclaimer."
         );
         // Set icon.
-        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(WhatsappSpammer.class.getResourceAsStream("/images/icon.png")));
+        ((Stage) alert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(WhatsappSpammer.class.getResourceAsStream("/resources/icon.png")));
         ButtonType btnOk = new ButtonType("Ok", ButtonData.LEFT);
         ButtonType btnCancel = new ButtonType("Cancel", ButtonData.CANCEL_CLOSE);
 
@@ -39,10 +40,11 @@ public class WhatsappSpammer extends Application {
         if (alert.showAndWait().get() != btnOk) {
             System.exit(0);
         }
+*/
         // Open the main menu.
         Parent main = FXMLLoader.load(getClass().getResource("/mainmenu/mainmenu.fxml"));
         Scene scene = new Scene(main);
-        stage.getIcons().add(new Image(WhatsappSpammer.class.getResourceAsStream("/images/icon.png")));
+        stage.getIcons().add(new Image(WhatsappSpammer.class.getResourceAsStream("/resources/icon.png")));
         stage.setScene(scene);
         stage.setTitle("Main menu");
         stage.show();

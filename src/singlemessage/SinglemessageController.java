@@ -32,7 +32,7 @@ public class SinglemessageController implements Initializable {
         errorAlert.setTitle("Error");
         errorAlert.setHeaderText("Some fields contain an invalid parameter.");
         // Set icon.
-        ((Stage) errorAlert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(SinglemessageController.class.getResourceAsStream("/images/icon.png")));
+        ((Stage) errorAlert.getDialogPane().getScene().getWindow()).getIcons().add(new Image(SinglemessageController.class.getResourceAsStream("/resources/icon.png")));
     }
 
     // Close button pressed: close window.
