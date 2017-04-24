@@ -25,7 +25,7 @@ public class Message {
     public Message(String text, int waitTimeMin, int waitTimeMax) throws Exception {
         rand = new Random();
         // Insert newlines where due.
-        this.text = text.replaceFirst("#NL#", "\n");
+        this.text = text.replace("#NL#", "\n");
         this.setWaitTimeInterval(waitTimeMin, waitTimeMax);
     }
 
